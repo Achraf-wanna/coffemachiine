@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <TabPane layoutY="-7.0" prefHeight="407.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add technicien">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="367.0" prefWidth="649.0">
+                     <children>
+                        <TableView fx:id="tech_table" layoutX="289.0" layoutY="40.0" prefHeight="338.0" prefWidth="311.0">
+                          <columns>
+                            <TableColumn fx:id="id" prefWidth="51.0" text="C1" />
+                            <TableColumn fx:id="name" prefWidth="57.0" text="C2" />
+                              <TableColumn fx:id="phone" prefWidth="60.0" text="C1" />
+                              <TableColumn fx:id="idRF" prefWidth="62.0" text="C1" />
+                              <TableColumn fx:id="code" text="C1" />
+                          </columns>
+                        </TableView>
+                        <Line endX="140.0" endY="-15.0" layoutX="148.0" layoutY="15.0" startX="140.0" startY="363.0" />
+                        <Label layoutX="402.0" layoutY="14.0" prefHeight="17.0" prefWidth="101.0" text="Technicien List" />
+                        <TextField layoutX="123.0" layoutY="28.0" />
+                        <TextField fx:id="Nom" layoutX="123.0" layoutY="94.0" />
+                        <TextField fx:id="Phone" layoutX="123.0" layoutY="164.0" />
+                        <Label layoutX="37.0" layoutY="98.0" text="Nom" />
+                        <Label layoutX="37.0" layoutY="168.0" text="Phone" />
+                        <Label layoutX="40.0" layoutY="32.0" text="Id" />
+                        <Label layoutX="35.0" layoutY="235.0" text="accessCode" />
+                        <TextField fx:id="AccessCode" layoutX="123.0" layoutY="232.0" />
+                        <Label layoutX="35.0" layoutY="295.0" text="Ref" />
+                        <TextField fx:id="Ref" layoutX="123.0" layoutY="292.0" />
+                        <Button fx:id="addtechnicien" layoutX="123.0" layoutY="336.0" mnemonicParsing="false" onKeyPressed="#AddTechnician" prefHeight="25.0" prefWidth="63.0" text="Add" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Add client">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="289.0" layoutY="40.0" prefHeight="338.0" prefWidth="311.0">
+                           <columns>
+                              <TableColumn prefWidth="143.32919311523438" text="C1" />
+                              <TableColumn prefWidth="166.67080688476562" text="C2" />
+                           </columns>
+                        </TableView>
+                        <Line endX="140.0" endY="-15.0" layoutX="149.0" layoutY="15.0" startX="140.0" startY="363.0" />
+                        <Label layoutX="413.0" layoutY="14.0" prefHeight="17.0" prefWidth="101.0" text="Clients List" />
+                        <TextField layoutX="123.0" layoutY="38.0" />
+                        <TextField layoutX="123.0" layoutY="104.0" />
+                        <TextField layoutX="123.0" layoutY="174.0" />
+                        <Label layoutX="37.0" layoutY="108.0" text="Nom" />
+                        <Label layoutX="37.0" layoutY="178.0" text="Phone" />
+                        <Label layoutX="40.0" layoutY="42.0" text="Id" />
+                        <Button layoutX="118.0" layoutY="336.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Add" />
+                        <TextField layoutX="123.0" layoutY="241.0" />
+                        <Label layoutX="37.0" layoutY="245.0" text="Credit" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Add machine">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField layoutX="114.0" layoutY="51.0" />
+                        <Label layoutX="37.0" layoutY="54.0" text="Id" />
+                        <Line endX="140.0" endY="-15.0" layoutX="149.0" layoutY="15.0" startX="140.0" startY="363.0" />
+                        <TableView layoutX="290.0" layoutY="39.0" prefHeight="338.0" prefWidth="311.0">
+                           <columns>
+                              <TableColumn prefWidth="143.32919311523438" text="C1" />
+                              <TableColumn prefWidth="166.67080688476562" text="C2" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="403.0" layoutY="9.0" prefHeight="17.0" prefWidth="101.0" text="Machine List" />
+                        <Button fx:id="addmachine" layoutX="114.0" layoutY="329.0" mnemonicParsing="false" onKeyPressed="#AddMachine" prefHeight="25.0" prefWidth="63.0" text="Add" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Add products">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="product_price1" layoutX="114.0" layoutY="173.0" />
+                        <TextField fx:id="idproduct" layoutX="114.0" layoutY="51.0" />
+                        <TextField fx:id="prduct_name1" layoutX="114.0" layoutY="116.0" />
+                        <Label layoutX="35.0" layoutY="117.0" text="Nom" />
+                        <Label layoutX="37.0" layoutY="180.0" text="Price" />
+                        <Label layoutX="37.0" layoutY="54.0" text="Id" />
+                        <Line endX="140.0" endY="-15.0" layoutX="149.0" layoutY="15.0" startX="140.0" startY="363.0" />
+                        <TableView fx:id="product_table" layoutX="290.0" layoutY="39.0" prefHeight="338.0" prefWidth="311.0">
+                           <columns>
+                              <TableColumn fx:id="product_id" prefWidth="84.0" text="C1" />
+                              <TableColumn fx:id="product_name" prefWidth="98.0" text="C2" />
+                              <TableColumn fx:id="product_price" prefWidth="125.0" text="C1" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="403.0" layoutY="9.0" prefHeight="17.0" prefWidth="101.0" text="Products List" />
+                        <Button fx:id="add_product" layoutX="114.0" layoutY="329.0" mnemonicParsing="false" onKeyPressed="#AddProduct" prefHeight="25.0" prefWidth="63.0" text="Add" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Run">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>
